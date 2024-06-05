@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <title>Avaliação do Jogo</title>
+    <link rel="stylesheet" type="text/css" href="regrinha.css">
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            background-color: #1c1c1c; 
+            color: #f0f0f0; 
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin: 0.5em 0;
+            color: #f0f0f0; 
+        }
+        .form-container {
+            width: 80%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #333; 
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .campo {
+            margin-bottom: 1em;
+            text-align: left;
+        }
+        .campo label {
+            display: block;
+            margin-bottom: 0.5em;
+            color: #f0f0f0; 
+        }
+        .campo input[type="email"],
+        .campo input[type="number"],
+        .campo textarea {
+            width: 100%;
+            padding: 0.5em;
+            font-size: 1em;
+            border: 1px solid #555;
+            border-radius: 4px;
+            background-color: #222; 
+            color: #f0f0f0; 
+            box-sizing: border-box; 
+        }
+        .checkbox {
+            display: flex;
+            align-items: center;
+        }
+        .checkbox input[type="checkbox"] {
+            margin-right: 0.5em;
+        }
+        .botao {
+            background-color: #555; 
+            color: #f0f0f0;
+            padding: 10px 20px; 
+            font-size: 1em; 
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            width: auto;
+        }
+        .botao:hover {
+            background-color: #333;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Avaliação do Jogo</h1>
+    <div class="form-container">
+        <form action="#" method="post" oninput="total.value = (noites.valueAsNumber * 1500) + ((hospede.valueAsNumber - 1) * 1)">
+            <fieldset>
+                <div class="campo">
+                    <label>Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="campo">
+                    <label>Repita o email:</label>
+                    <input type="email" id="email_repeti" name="email_repeti" required oninput="check(this)">
+                </div>
+                <div class="campo">
+                    <label>Nota de 1 até 5:</label>
+                    <input type="number" id="hospede" name="hospede" value="1" min="1" max="5" required>
+                </div>
+                <div class="campo">
+                    <label>Comentário:</label>
+                    <textarea name="message" style="width: 100%;" placeholder="Poderia nos informar sobre sua opinião?"></textarea>
+                </div>
+                <div class="campo">
+                    <label>Notificação</label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="newsletter" value="1"> Gostaria de receber notificações sobre outros jogos?
+                    </label>
+                </div>
+                <button class="botao submit" type="submit" name="submit">Enviar avaliação</button>
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>

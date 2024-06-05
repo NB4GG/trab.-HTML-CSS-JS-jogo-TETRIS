@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <title>Tetris</title>
+    <link rel="stylesheet" type="text/css" href="regrinha.css">
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            background-color: #1c1c1c; 
+            color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            font-size: 3em; 
+            margin: 0.5em 0;
+        }
+        .t { color: #4285F4; } 
+        .e { color: #EA4335; }
+        .t2 { color: #FBBC05; } 
+        .r { color: #34A853; } 
+        .i { color: #EA4335; } 
+        .s { color: #4285F4; } 
+        p {
+            font-size: 1.2em;
+            margin: 0.5em 0;
+            color: #f0f0f0; 
+        }
+        .botao {
+            background-color: #4CAF50; 
+            color: #ffffff; 
+            padding: 10px 20px; 
+            font-size: 1.2em; 
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            width: auto; 
+        }
+        .botao:hover {
+            background-color: #45a049; 
+            transform: scale(1.05);
+        }
+        #linkAvaliacao {
+            position: fixed;
+            bottom: 20px;
+            background-color: #4285F4; 
+            color: #ffffff; 
+            padding: 8px 16px; 
+            font-size: 1em; 
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+         #linkAvaliacao:hover {
+            background-color: #3367D6; 
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <h1><span class="t">T</span><span class="e">e</span><span class="t2">t</span><span class="r">r</span><span class="i">i</span><span class="s">s</span></h1>
+    <p>!!!Aperte em (jogar) para prosseguir!!!</p>
+    <a href="game_tetris.html" class="botao">Jogar</a>
+    <a href="avaliacaodeapoio.html" id="linkAvaliacao">Avaliação do Jogo</a>
+</body>
+
+</html>
